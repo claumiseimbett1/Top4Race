@@ -1,13 +1,23 @@
-# 🏊‍♀️ Championship Versión 4 – Página Web Oficial
+# 🏊‍♂️ Sistema Top4Race – Sitio Web
 
-Bienvenido al repositorio oficial de la **página web del evento Championship V4**, una plataforma dinámica diseñada para visualizar información en tiempo real de las competencias de natación, incluyendo resultados del evento femenino directamente sincronizados con Google Sheets.
+Landing y evento modelo para **Sistema Top4Race** del Club Deportivo AquaTEN.  
+Incluye página principal, evento modelo con resultados en tiempo real (Google Sheets), y recursos multimedia.
 
-## 🚀 Características Principales
+## ✨ Características
 
-- ✅ Visualización en tiempo real de resultados (solo categoría femenina por ahora).
-- 📊 Integración con Google Sheets para lectura dinámica de datos.
-- 🎨 Diseño adaptable, limpio y listo para ser desplegado en Netlify.
-- 🌐 Interfaz web estática desarrollada en HTML, CSS y JavaScript.
-- 🛠️ Actualización automática de resultados sin necesidad de recargar manualmente.
+- Landing moderna con secciones de servicios, eventos y contacto.
+- Evento modelo con lectura de datos desde Google Sheets.
+- Diseño responsive y estilos alineados a la identidad Top4Race.
+- Videos e imágenes organizados por carpetas.
 
-## 📁 Estructura del Proyecto
+## 📂 Estructura
+
+- `index.html` – Landing principal.
+- `eventos/evento-modelo.html` – Evento modelo.
+- `style.css` – Estilos globales.
+- `img/`, `logos/`, `video/` – Recursos.
+- `documentos/` – PDFs y documentos legales.
+
+## 🚀 Despliegue
+
+Proyecto estático listo para subir a Netlify o similar.
