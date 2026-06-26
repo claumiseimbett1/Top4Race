@@ -497,7 +497,19 @@
             </div>
           </div>
         </div>
-        <form class="contact-form">
+        <form
+          name="contacto-top4race"
+          method="POST"
+          action="/gracias.html"
+          class="contact-form"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contacto-top4race">
+          <input type="hidden" name="origen" value="Landing Top4Race">
+          <p class="netlify-honeypot" aria-hidden="true">
+            <label>No completar: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
           <label>
             Nombre
             <input type="text" name="name" placeholder="Tu nombre" required>
@@ -512,10 +524,10 @@
           </label>
           <label>
             Mensaje
-            <textarea name="message" rows="4" placeholder="Cuéntanos sobre tu evento y la página web que necesitas"></textarea>
+            <textarea name="message" rows="4" placeholder="Cuéntanos sobre tu evento y la página web que necesitas" required></textarea>
           </label>
           <button class="btn primary" type="submit">Enviar mensaje</button>
-          <p class="form-note">* Este formulario es demostrativo. Podemos integrarlo con tu correo.</p>
+          <p class="form-note">Te responderemos pronto en el correo que indiques.</p>
         </form>
       </div>
     </section>
@@ -541,5 +553,16 @@
     </div>
     <div class="footer-bottom">© 2026 Top4Race. Todos los derechos reservados.</div>
   </footer>
+
+  <!-- Formulario oculto para que Netlify detecte el form del evento modelo -->
+  <form name="contacto-evento-modelo" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contacto-evento-modelo">
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="text" name="event">
+    <textarea name="message"></textarea>
+    <input type="hidden" name="origen" value="Evento modelo">
+    <input name="bot-field">
+  </form>
 </body>
 </html>

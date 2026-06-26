@@ -3176,7 +3176,19 @@
                     </div>
                 </div>
             </div>
-            <form class="contact-form">
+            <form
+                name="contacto-evento-modelo"
+                method="POST"
+                action="/gracias.html"
+                class="contact-form"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+            >
+                <input type="hidden" name="form-name" value="contacto-evento-modelo">
+                <input type="hidden" name="origen" value="Evento modelo">
+                <p class="netlify-honeypot" aria-hidden="true">
+                    <label>No completar: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                </p>
                 <label>
                     Nombre
                     <input type="text" name="name" placeholder="Tu nombre" required>
@@ -3191,10 +3203,10 @@
                 </label>
                 <label>
                     Mensaje
-                    <textarea name="message" rows="4" placeholder="Cuéntanos sobre tu evento y la página web que necesitas"></textarea>
+                    <textarea name="message" rows="4" placeholder="Cuéntanos sobre tu evento y la página web que necesitas" required></textarea>
                 </label>
                 <button class="btn primary" type="submit">Enviar mensaje</button>
-                <p class="form-note">* Este formulario es demostrativo. Podemos integrarlo con tu correo.</p>
+                <p class="form-note">Te responderemos pronto en el correo que indiques.</p>
             </form>
         </div>
     </section>
