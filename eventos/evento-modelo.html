@@ -43,8 +43,8 @@
       }
     }
     </script>
-    <!-- theme-color: PWA feature for mobile browsers -->
     <meta name="theme-color" content="#0b1039">
+    <link rel="stylesheet" href="../style.css">
     
     <!-- Performance optimizations -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" as="script">
@@ -392,26 +392,6 @@
             justify-content: center;
         }
 
-        .event-logo-watermark {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -58%);
-            padding: 28px 40px;
-            border: 3px dashed rgba(255, 255, 255, 0.28);
-            border-radius: 18px;
-            color: rgba(255, 255, 255, 0.22);
-            font-size: clamp(1.1rem, 3vw, 1.75rem);
-            font-weight: 800;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            text-align: center;
-            line-height: 1.3;
-            pointer-events: none;
-            user-select: none;
-            z-index: 0;
-        }
-
         .hero-content {
             text-align: center;
             z-index: 1;
@@ -433,8 +413,8 @@
             font-weight: 300;
         }
 
-        /* Info & Contact Section */
-        .info-section, .contact-section {
+        /* Info Section */
+        .info-section {
             padding: 100px 20px;
             background-color: #ffffff;
         }
@@ -452,10 +432,8 @@
             font-weight: 700;
         }
 
-        .contact-section .section-title {
-            font-size: 1.65em;
-            margin-bottom: 36px;
-            font-weight: 600;
+        .section.contact {
+            padding: 100px 20px;
         }
 
         .cards-grid {
@@ -464,17 +442,8 @@
             gap: 40px;
             margin-bottom: 60px;
         }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 28px;
-            justify-content: center;
-            max-width: 1040px;
-            margin: 0 auto;
-        }
 
-        .info-card, .contact-card-link {
+        .info-card {
             background: #ffffff;
             border: 1px solid #f4f7fb;
             border-radius: 20px;
@@ -486,7 +455,7 @@
             color: inherit;
         }
 
-        .info-card:hover, .contact-card-link:hover {
+        .info-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 40px rgba(11, 16, 57, 0.15);
             border-color: var(--secondary-color);
@@ -507,14 +476,14 @@
             height: 100%;
         }
 
-        .info-card h3, .contact-card-link h3 {
+        .info-card h3 {
             color: var(--primary-color);
             font-size: 1.8em;
             margin-bottom: 15px;
             font-weight: 600;
         }
 
-        .info-card p, .contact-card-link p {
+        .info-card p {
             color: var(--text-gray);
             font-size: 1.1em;
             line-height: 1.8;
@@ -1003,11 +972,6 @@
                 font-size: 2em;
             }
 
-            .contact-section .section-title {
-                font-size: 1.35em;
-                margin-bottom: 28px;
-            }
-
             .nav-container {
                 padding: 15px 20px;
                 flex-wrap: wrap;
@@ -1060,7 +1024,7 @@
                 min-height: 400px;
             }
 
-            .info-section, .results-section, .sponsors-section, .cta-section, .contact-section {
+            .info-section, .results-section, .sponsors-section, .cta-section, .section.contact {
                 padding: 60px 20px;
             }
 
@@ -1179,36 +1143,6 @@
                 gap: 25px;
             }
 
-            .contact-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
-                max-width: 100%;
-                padding: 0 10px;
-            }
-
-            .contact-card-link {
-                min-width: auto;
-                padding: 12px 5px;
-                font-size: 0.8em;
-                text-align: center;
-            }
-
-            .contact-card-link h3 {
-                font-size: 0.9em;
-                margin-bottom: 4px;
-            }
-
-            .contact-card-link p {
-                font-size: 0.75em;
-                margin: 0;
-            }
-
-            .sticker-icon {
-                width: 30px;
-                height: 30px;
-                margin: 0 auto 8px auto;
-            }
-
             .status-indicator {
                 position: relative;
                 top: auto;
@@ -1223,31 +1157,6 @@
             .sponsors-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
-                padding: 0 5px;
-            }
-
-            .contact-card-link:last-child {
-                grid-column: 1 / -1;
-                max-width: 200px;
-                margin: 0 auto;
-            }
-
-            .contact-card-link {
-                padding: 15px 8px;
-                font-size: 0.85em;
-            }
-
-            .contact-card-link h3 {
-                font-size: 1em;
-            }
-
-            .contact-card-link p {
-                font-size: 0.8em;
             }
         }
 
@@ -2397,6 +2306,9 @@
             <a class="logo-box logo-box--light logo-link" href="https://top4race.com" target="_blank" rel="noopener" aria-label="Top4Race">
                 <img src="../logos/logoTop4Race.png" alt="Logo Top4Race">
             </a>
+            <div class="logo-box logo-box--light">
+                <img src="../logos/AQUATEN_LogoTransparenteGRANDE.png" alt="Logo AquaTEN">
+            </div>
             
             <!-- Navigation Menu -->
             <div class="nav-menu" id="navMenu">
@@ -2439,7 +2351,6 @@
             </video>
         </div>
         <div class="video-overlay">
-            <div class="event-logo-watermark" aria-hidden="true">COLOCA TU LOGO AQUI</div>
             <div class="hero-content">
                 <h1>Evento Modelo de Natación</h1>
                 <p class="subtitle">Competencia de Natación gestionada por el sistema <a class="inline-link" href="https://top4race.com" target="_blank" rel="noopener">Top4Race</a></p>
@@ -3158,51 +3069,111 @@
     </section>
     
     <!-- Contact Section -->
-    <section class="contact-section" id="contacto">
-        <div class="container">
-            <h2 class="section-title">Contacto de Sistema Top4Race</h2>
-            <div class="contact-grid">
-                <!-- WhatsApp Top4Race -->
-                <a href="https://wa.me/573043499052" target="_blank" rel="noopener" class="contact-card-link">
-                    <div class="sticker-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.75 13.96C16.41 13.79 15.31 13.24 15.08 13.15C14.86 13.06 14.7 13.02 14.54 13.28C14.38 13.55 13.91 14.11 13.75 14.28C13.59 14.45 13.43 14.47 13.16 14.3C12.89 14.13 12.06 13.85 11.07 12.99C10.29 12.3 9.73 11.48 9.59 11.21C9.45 10.94 9.56 10.81 9.7 10.67C9.83 10.53 9.99 10.33 10.13 10.18C10.27 10.03 10.32 9.9 10.42 9.73C10.52 9.56 10.47 9.4 10.39 9.27C10.31 9.14 9.85 7.97 9.66 7.52C9.47 7.07 9.28 7.13 9.14 7.12H8.62C8.42 7.12 8.13 7.19 7.89 7.43C7.65 7.67 6.96 8.31 6.96 9.56C6.96 10.81 7.92 12.01 8.06 12.18C8.2 12.35 9.85 14.8 12.29 15.76C14.73 16.72 14.73 16.34 15.13 16.3C15.53 16.26 16.54 15.68 16.75 15.13C16.96 14.58 16.96 14.12 16.88 13.96H16.75Z" stroke="#0b1039" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.04 21.82C17.56 21.82 22 17.38 22 11.86C22 6.34 17.56 1.9 12.04 1.9C6.52 1.9 2.08 6.34 2.08 11.86C2.08 14.13 2.84 16.24 4.12 17.9L2.56 21.34L6.17 19.95C7.73 21.13 9.79 21.82 12.04 21.82Z" stroke="#00f0ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <section class="section contact contact-section" id="contacto">
+        <div class="container contact-grid">
+            <div>
+                <p class="eyebrow">Contacto</p>
+                <h2>Contacto de Sistema Top4Race</h2>
+                <p>Escríbenos para conocer más sobre cronometraje con chips, páginas web de eventos, diplomas descargables y compartir resultados en redes sociales.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 6h16v12H4z" />
+                                <path d="M4 7l8 6 8-6" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Correo</span>
+                            <span>aquatencd@gmail.com</span>
+                        </div>
                     </div>
-                    <h3>WhatsApp Top4Race</h3>
-                    <p>+57 304 349 9052</p>
-                </a>
-                <!-- Correo Top4Race -->
-                <a href="mailto:aquatencd@gmail.com" class="contact-card-link">
-                    <div class="sticker-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v12H4z" stroke="#00f0ff" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="#0b1039" stroke-width="2"/></svg>
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 5h4l2 5-3 2c1.5 3 4 5.5 7 7l2-3 5 2v4c-8.5 1-15-5.5-17-14z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Teléfono</span>
+                            <a class="inline-link" href="https://wa.me/573043499052" target="_blank" rel="noopener">+57 304 349 9052</a>
+                        </div>
                     </div>
-                    <h3>Correo Top4Race</h3>
-                    <p>aquatencd@gmail.com</p>
-                </a>
-                <!-- Web Top4Race -->
-                <a href="https://top4race.com/" target="_blank" rel="noopener" class="contact-card-link">
-                    <div class="sticker-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#00f0ff" stroke-width="2"/><path d="M3 12h18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 1 0 18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 0 0 18" stroke="#0b1039" stroke-width="2"/></svg>
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17" cy="7" r="1" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Instagram</span>
+                            <a class="inline-link" href="https://www.instagram.com/aquaten.cd/" target="_blank" rel="noopener">@aquaten.cd</a>
+                        </div>
                     </div>
-                    <h3>Web Top4Race</h3>
-                    <p>top4race.com</p>
-                </a>
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/aquaten.cd" target="_blank" rel="noopener" class="contact-card-link">
-                    <div class="sticker-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 11.37C16 13.38 14.21 15 12 15C9.79 15 8 13.38 8 11.37C8 9.36 9.79 7.75 12 7.75C14.21 7.75 16 9.36 16 11.37Z" stroke="#0b1039" stroke-width="2"/><path d="M17.5 6.5H17.51" stroke="#0b1039" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z" />
+                                <circle cx="12" cy="11" r="2.5" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Ubicación</span>
+                            <span>Montería, Córdoba, Colombia</span>
+                        </div>
                     </div>
-                    <h3>Instagram</h3>
-                    <p>@aquaten.cd</p>
-                </a>
-                <!-- Web AquaTEN -->
-                <a href="https://www.aquatencd.com/" target="_blank" rel="noopener" class="contact-card-link">
-                    <div class="sticker-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#00f0ff" stroke-width="2"/><path d="M3 12h18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 1 0 18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 0 0 18" stroke="#0b1039" stroke-width="2"/></svg>
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M3 12h18" />
+                                <path d="M12 3a15 15 0 0 1 0 18" />
+                                <path d="M12 3a15 15 0 0 0 0 18" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Web Top4Race</span>
+                            <a class="inline-link" href="https://top4race.com/" target="_blank" rel="noopener">top4race.com</a>
+                        </div>
                     </div>
-                    <h3>Web AquaTEN</h3>
-                    <p>www.aquatencd.com</p>
-                </a>
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M3 12h18" />
+                                <path d="M12 3a15 15 0 0 1 0 18" />
+                                <path d="M12 3a15 15 0 0 0 0 18" />
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Web AquaTEN</span>
+                            <a class="inline-link" href="https://www.aquatencd.com/" target="_blank" rel="noopener">www.aquatencd.com</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <form class="contact-form">
+                <label>
+                    Nombre
+                    <input type="text" name="name" placeholder="Tu nombre" required>
+                </label>
+                <label>
+                    Correo
+                    <input type="email" name="email" placeholder="tucorreo@email.com" required>
+                </label>
+                <label>
+                    Evento
+                    <input type="text" name="event" placeholder="Natación, running, patinaje u otro evento">
+                </label>
+                <label>
+                    Mensaje
+                    <textarea name="message" rows="4" placeholder="Cuéntanos sobre tu evento y la página web que necesitas"></textarea>
+                </label>
+                <button class="btn primary" type="submit">Enviar mensaje</button>
+                <p class="form-note">* Este formulario es demostrativo. Podemos integrarlo con tu correo.</p>
+            </form>
         </div>
     </section>
 
