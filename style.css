@@ -315,26 +315,6 @@ img {
   color: rgba(255, 255, 255, 0.92);
 }
 
-.hero-price {
-  margin: 4px 0 0;
-  font-size: 1.05rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.hero-price strong {
-  color: #00e5ff;
-  font-weight: 800;
-  text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
-}
-
-.hero-price-note {
-  margin: 10px 0 20px;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.78);
-}
-
 .lead {
   font-size: 1.05rem;
   color: var(--muted);
