@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento Modelo de Natación | AquaTEN</title>
-    <meta name="description" content="Evento modelo de natación organizado por AquaTEN con resultados en tiempo real, diplomas descargables y clasificaciones por categorías.">
-    <meta name="keywords" content="natación, evento modelo, AquaTEN, Top4Race, competencia, resultados">
+    <title>Evento Modelo Top4Race | Resultados en Vivo y Diplomas | Colombia</title>
+    <meta name="description" content="Demostración de página web para eventos deportivos en Colombia: resultados en tiempo real con chips de cronometraje, clasificaciones por categoría y diplomas descargables. Top4Race por AquaTEN.">
+    <meta name="keywords" content="evento deportivo modelo, resultados en tiempo real Colombia, diplomas descargables, cronometraje con chips, página web eventos deportivos, clasificaciones natación, Top4Race, AquaTEN, lectura de tiempos deportivos">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://top4race.com/eventos/evento-modelo.html">
+    <meta name="geo.region" content="CO">
+    <meta name="geo.placename" content="Colombia">
+    <meta property="og:title" content="Evento Modelo Top4Race | Tiempos en Vivo y Diplomas">
+    <meta property="og:description" content="Ejemplo de página web para eventos deportivos con visualización de tiempos, clasificaciones y descarga de diplomas. Colombia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://top4race.com/eventos/evento-modelo.html">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="Top4Race">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsEvent",
+      "name": "Evento Modelo Top4Race",
+      "description": "Demostración de página web para eventos deportivos con cronometraje por chips, resultados en tiempo real y diplomas descargables.",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Colombia",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CO"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Top4Race",
+        "url": "https://top4race.com/"
+      }
+    }
+    </script>
     <!-- theme-color: PWA feature for mobile browsers -->
     <meta name="theme-color" content="#0b1039">
     
@@ -4684,17 +4717,17 @@
                 
                 message = `🏊‍♂️ ${swimmer}: ¡Felicitaciones por haber obtenido la posición No. ${position} con un tiempo de ${time} en ${pruebaAbrev} en el Evento Modelo de Natación! 🏆 
 
-Ver más resultados: https://ivchampionship.netlify.app`;
+Ver más resultados: https://top4race.com/eventos/evento-modelo.html`;
             } else if (category === 'Clasificación por Equipos') {
                 // Para equipos - solo posición
                 message = `¡🏊‍♂️ Felicitaciones al equipo ${swimmer} por haber obtenido la posición No. ${position} en el Evento Modelo de Natación! 🏆 
 
-Ver más resultados: https://ivchampionship.netlify.app`;
+Ver más resultados: https://top4race.com/eventos/evento-modelo.html`;
             } else {
                 // Para clasificación por género - usar categoría
                 message = `🏊‍♂️ ${swimmer}: ¡Felicitaciones por haber obtenido la posición No. ${position} en la categoría ${category} en el Evento Modelo de Natación! 🏆 
 
-Ver más resultados: https://ivchampionship.netlify.app`;
+Ver más resultados: https://top4race.com/eventos/evento-modelo.html`;
             }
             
             const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
@@ -4722,23 +4755,23 @@ Ver más resultados: https://ivchampionship.netlify.app`;
                 
                 message = `🏊‍♂️ ${swimmer}: ¡Felicitaciones por haber obtenido la posición No. ${position} con un tiempo de ${time} en ${pruebaAbrev} en el Evento Modelo de Natación! 🏆 
 
-#Natación #AquaTEN #Championship2025 #Swimming #MasterSwimming
+#Natación #AquaTEN #Top4Race #EventoModelo #Swimming #MasterSwimming
 
-Ver resultados completos: https://ivchampionship.netlify.app`;
+Ver resultados completos: https://top4race.com/eventos/evento-modelo.html`;
             } else if (category === 'Clasificación por Equipos') {
                 // Para equipos - solo posición
                 message = `🏊‍♂️ Felicitaciones al equipo ${swimmer} por haber obtenido la posición No. ${position} en el Evento Modelo de Natación! 🏆 
 
-#Natación #AquaTEN #Championship2025 #TeamWork #MasterSwimming
+#Natación #AquaTEN #Top4Race #EventoModelo #TeamWork #MasterSwimming
 
-Ver resultados completos: https://ivchampionship.netlify.app`;
+Ver resultados completos: https://top4race.com/eventos/evento-modelo.html`;
             } else {
                 // Para clasificación por género - usar categoría
                 message = `🏊‍♂️ ${swimmer}: ¡Felicitaciones por haber obtenido la posición No. ${position} en la categoría ${category} en el Evento Modelo de Natación! 🏆 
 
-#Natación #AquaTEN #Championship2025 #Swimming #MasterSwimming
+#Natación #AquaTEN #Top4Race #EventoModelo #Swimming #MasterSwimming
 
-Ver resultados completos: https://ivchampionship.netlify.app`;
+Ver resultados completos: https://top4race.com/eventos/evento-modelo.html`;
             }
             
             // Copiar al portapapeles y mostrar instrucciones
@@ -5071,7 +5104,7 @@ Ver resultados completos: https://ivchampionship.netlify.app`;
                 pdf.setTextColor(11, 16, 57); // Color azul del sitio
                 
                 // Título principal
-                pdf.text("IV CHAMPIONSHIP MASTER AQUATEN - RESULTADOS OFICIALES", 105, yPosition, { align: "center" });
+                pdf.text("EVENTO MODELO TOP4RACE - RESULTADOS OFICIALES", 105, yPosition, { align: "center" });
                 yPosition += 15;
                 
                 pdf.setFontSize(12);
@@ -5099,7 +5132,7 @@ Ver resultados completos: https://ivchampionship.netlify.app`;
                 yPosition = await addEquiposFromGoogleSheets(pdf, yPosition);
                 
                 // Guardar el PDF
-                const fileName = `Resultados_IV_Championship_${new Date().toISOString().split('T')[0]}.pdf`;
+                const fileName = `Resultados_Evento_Modelo_Top4Race_${new Date().toISOString().split('T')[0]}.pdf`;
                 pdf.save(fileName);
                 
                 // Ocultar status
@@ -6114,7 +6147,7 @@ Ver resultados completos: https://ivchampionship.netlify.app`;
             pdf.rect(logoX, logoY - 8, 30, 16);
             
             // Texto del logo
-            pdf.text("IV CHAMP", logoX + 2, logoY - 2);
+            pdf.text("TOP4", logoX + 2, logoY - 2);
             pdf.setFontSize(8);
             pdf.text("AQUATEN", logoX + 2, logoY + 4);
             
@@ -7227,7 +7260,7 @@ Ver resultados completos: https://ivchampionship.netlify.app`;
                 // Título simple
                 pdf.setFont("helvetica", "bold");
                 pdf.setFontSize(16);
-                pdf.text("IV CHAMPIONSHIP MASTER AQUATEN - RESULTADOS", 20, 30);
+                pdf.text("EVENTO MODELO TOP4RACE - RESULTADOS", 20, 30);
                 
                 pdf.setFontSize(12);
                 pdf.text("Reporte generado el " + new Date().toLocaleDateString('es-ES'), 20, 45);
@@ -7236,7 +7269,7 @@ Ver resultados completos: https://ivchampionship.netlify.app`;
                 pdf.setFont("helvetica", "normal");
                 pdf.setFontSize(10);
                 pdf.text("Para obtener los resultados completos, visita:", 20, 70);
-                pdf.text("https://ivchampionship.netlify.app", 20, 80);
+                pdf.text("https://top4race.com/eventos/evento-modelo.html", 20, 80);
                 
                 // Información básica de eventos
                 pdf.setFont("helvetica", "bold");
@@ -7254,7 +7287,7 @@ Ver resultados completos: https://ivchampionship.netlify.app`;
                     pdf.text(event, 25, 115 + (index * 10));
                 });
                 
-                pdf.save("Resultados_IV_Championship_Simple.pdf");
+                pdf.save("Resultados_Evento_Modelo_Top4Race.pdf");
                 statusDiv.style.display = 'none';
                 
             } catch (error) {
@@ -7432,7 +7465,7 @@ Ver resultados completos: https://ivchampionship.netlify.app`;
                 pdf.text("Evento Modelo de Natación - AquaTEN © 2025", 105, yPos + 10, { align: "center" });
 
                 // Descargar el PDF
-                pdf.save("Terminos_y_Condiciones_IV_Championship_2025.pdf");
+                pdf.save("Terminos_y_Condiciones_Evento_Modelo_Top4Race.pdf");
                 
                 console.log(" Términos y condiciones descargados exitosamente");
                 
@@ -7455,8 +7488,8 @@ Ver resultados completos: https://ivchampionship.netlify.app`;
                 // Crear un enlace de descarga para el documento local
                 // El archivo debe estar en la carpeta 'documentos' del proyecto
                 const link = document.createElement('a');
-                link.href = 'documentos/Terminos_y_Condiciones_IV_Championship_2025.pdf';
-                link.download = 'Terminos_y_Condiciones_IV_Championship_2025.pdf';
+                link.href = 'documentos/Terminos_y_Condiciones_Evento_Modelo_Top4Race.pdf';
+                link.download = 'Terminos_y_Condiciones_Evento_Modelo_Top4Race.pdf';
                 link.target = '_blank';
                 
                 // Verificar si el archivo existe antes de intentar descargarlo
@@ -7746,7 +7779,7 @@ Ver resultados completos: https://ivchampionship.netlify.app`;
 Organizadores:
 @aquaten.cd
 
-#Natación #AquaTEN #Championship2025 #Swimming #MasterSwimming
+#Natación #AquaTEN #Top4Race #EventoModelo #Swimming #MasterSwimming
 
 ¡Gracias por creer en la natación cordobesa! 💙🏆`;
 
