@@ -781,6 +781,19 @@ img {
   object-fit: contain;
 }
 
+.history-card--dual .history-logo--club {
+  width: 86px;
+  height: 86px;
+  max-width: none;
+  max-height: none;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
 .history-body {
   flex-shrink: 0;
   padding: 22px 24px 24px;
