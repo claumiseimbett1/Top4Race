@@ -145,11 +145,25 @@
         }
 
         .logo-box--placeholder {
-            width: 90px;
+            min-width: 110px;
             height: 54px;
+            padding: 0 10px;
             border: 2px dashed rgba(11, 16, 57, 0.25);
             border-radius: 12px;
             background: rgba(11, 16, 57, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .logo-placeholder-text {
+            font-size: 0.72rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: rgba(11, 16, 57, 0.45);
         }
 
         .logo-box--light {
@@ -415,6 +429,12 @@
             color: var(--primary-color);
             margin-bottom: 60px;
             font-weight: 700;
+        }
+
+        .contact-section .section-title {
+            font-size: 1.65em;
+            margin-bottom: 36px;
+            font-weight: 600;
         }
 
         .cards-grid {
@@ -960,6 +980,11 @@
 
             .section-title {
                 font-size: 2em;
+            }
+
+            .contact-section .section-title {
+                font-size: 1.35em;
+                margin-bottom: 28px;
             }
 
             .nav-container {
@@ -1870,7 +1895,24 @@
         .results-cta-text {
             color: #dbeafe;
             font-size: 1.2em;
+            margin-bottom: 12px;
+        }
+
+        .results-cta-subtext {
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 1.05em;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .results-cta-note {
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.95em;
+            font-style: italic;
             margin-bottom: 0;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .clear-search-hidden {
@@ -2334,9 +2376,9 @@
             <a class="logo-box logo-box--light logo-link" href="https://top4race.com" target="_blank" rel="noopener" aria-label="Top4Race">
                 <img src="../logos/logoTop4Race.png" alt="Logo Top4Race">
             </a>
-            <div class="logo-box logo-box--light">
+            <a class="logo-box logo-box--light logo-link" href="https://www.aquatencd.com/" target="_blank" rel="noopener" aria-label="Club Deportivo AquaTEN">
                 <img src="../logos/AQUATEN_LogoTransparenteGRANDE.png" alt="Logo AquaTEN">
-            </div>
+            </a>
             
             <!-- Navigation Menu -->
             <div class="nav-menu" id="navMenu">
@@ -2357,7 +2399,9 @@
                 <span></span>
             </div>
             
-            <div class="logo-box logo-box--placeholder" aria-label="Logo del evento"></div>
+            <div class="logo-box logo-box--placeholder" aria-label="Logo del evento">
+                <span class="logo-placeholder-text">Aquí tu logo</span>
+            </div>
         </nav>
     </header>
 
@@ -2646,7 +2690,9 @@
             <div class="results-cta-card">
                 <h3 class="results-cta-title">¡Querido nadador: al finalizar la prueba encuentra los resultados aquí</h3>
                 <div class="results-cta-arrow">👇</div>
-                <p class="results-cta-text">Búscalos y comparte tus logros al mundo en tu red social favorita!</p>
+                <p class="results-cta-text">¡Búscalos y comparte tus logros al mundo en tu red social favorita!</p>
+                <p class="results-cta-subtext">Aquí abajo visualizarás tus resultados el día del evento.</p>
+                <p class="results-cta-note">En esta página modelo no se visualizan resultados reales, ya que tiene fines demostrativos.</p>
             </div>
         </div>
     </section>
@@ -3087,7 +3133,7 @@
     <section class="cta-section">
         <div class="container">
             <h2>¿Listo para competir?</h2>
-            <p>Únete a los xxx nadadores en esta emocionante competencia, con la participación dexxxlubes de Córdoba y el apoyo dexxx patrocinadores, en esta versión del Evento Mxx   de Natación organizada por el Club xxxx, con el apoyo tecnologico de <a class="inline-link" href="https://top4race.com" target="_blank" rel="noopener">Top4Race</a> del Club Deportivo AquaTEN.</p>
+            <p>Únete a los xxx nadadores en esta emocionante competencia, con la participación dexxxlubes de Córdoba y el apoyo dexxx patrocinadores, en esta versión del Evento Mxx   de Natación organizada por el Club xxxx, con el apoyo tecnologico de <a class="inline-link" href="https://top4race.com" target="_blank" rel="noopener">Top4Race</a> del Club Deportivo <a class="inline-link" href="https://www.aquatencd.com/" target="_blank" rel="noopener">AquaTEN</a>.</p>
             <a href="#" class="cta-button">Más Información</a>
         </div>
     </section>
@@ -3114,12 +3160,12 @@
                     <p>@AquaTEN</p>
                 </a>
                 <!-- Web Card -->
-                <a href="https://top4race.netlify.app/" target="_blank" rel="noopener" class="contact-card-link">
+                <a href="https://www.aquatencd.com/" target="_blank" rel="noopener" class="contact-card-link">
                     <div class="sticker-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#00f0ff" stroke-width="2"/><path d="M3 12h18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 1 0 18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 0 0 18" stroke="#0b1039" stroke-width="2"/></svg>
                     </div>
-                    <h3>Web</h3>
-                    <p>top4race.netlify.app</p>
+                    <h3>Web AquaTEN</h3>
+                    <p>www.aquatencd.com</p>
                 </a>
             </div>
         </div>
@@ -3128,7 +3174,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Sistema <a class="inline-link" href="https://top4race.com" target="_blank" rel="noopener">Top4Race</a> de AquaTEN Club Deportivo</p>
+            <p>&copy; 2026 Sistema <a class="inline-link" href="https://top4race.com" target="_blank" rel="noopener">Top4Race</a> de <a class="inline-link" href="https://www.aquatencd.com/" target="_blank" rel="noopener">AquaTEN</a> Club Deportivo</p>
             <p>Evento Modelo de Natación - Todos los derechos reservados</p>
         </div>
     </footer>
