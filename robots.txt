@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://top4race.com/sitemap.xml
+Sitemap: https://top4race.netlify.app/sitemap.xml
