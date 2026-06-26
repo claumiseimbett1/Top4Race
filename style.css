@@ -1237,6 +1237,22 @@ img {
   margin-bottom: 4px;
 }
 
+.contact-price-anchor {
+  margin: 0;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0, 153, 255, 0.25);
+  background: linear-gradient(135deg, rgba(0, 153, 255, 0.08), rgba(0, 229, 255, 0.06));
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--primary);
+}
+
+.contact-price-anchor strong {
+  color: #0099ff;
+  font-weight: 800;
+}
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
