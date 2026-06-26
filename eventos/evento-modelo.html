@@ -158,10 +158,10 @@
         }
 
         .logo-placeholder-text {
-            font-size: 0.72rem;
+            font-size: 0.62rem;
             font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: 0.02em;
+            line-height: 1.25;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
             color: rgba(11, 16, 57, 0.45);
         }
@@ -392,9 +392,30 @@
             justify-content: center;
         }
 
+        .event-logo-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -58%);
+            padding: 28px 40px;
+            border: 3px dashed rgba(255, 255, 255, 0.28);
+            border-radius: 18px;
+            color: rgba(255, 255, 255, 0.22);
+            font-size: clamp(1.1rem, 3vw, 1.75rem);
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.3;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+
         .hero-content {
             text-align: center;
             z-index: 1;
+            position: relative;
             padding: 0 20px;
         }
 
@@ -446,10 +467,10 @@
         
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 28px;
             justify-content: center;
-            max-width: 800px;
+            max-width: 1040px;
             margin: 0 auto;
         }
 
@@ -2376,9 +2397,6 @@
             <a class="logo-box logo-box--light logo-link" href="https://top4race.com" target="_blank" rel="noopener" aria-label="Top4Race">
                 <img src="../logos/logoTop4Race.png" alt="Logo Top4Race">
             </a>
-            <a class="logo-box logo-box--light logo-link" href="https://www.aquatencd.com/" target="_blank" rel="noopener" aria-label="Club Deportivo AquaTEN">
-                <img src="../logos/AQUATEN_LogoTransparenteGRANDE.png" alt="Logo AquaTEN">
-            </a>
             
             <!-- Navigation Menu -->
             <div class="nav-menu" id="navMenu">
@@ -2399,8 +2417,8 @@
                 <span></span>
             </div>
             
-            <div class="logo-box logo-box--placeholder" aria-label="Logo del evento">
-                <span class="logo-placeholder-text">Aquí tu logo</span>
+            <div class="logo-box logo-box--placeholder" aria-label="Espacio para logo del evento">
+                <span class="logo-placeholder-text">COLOCA TU LOGO AQUI</span>
             </div>
         </nav>
     </header>
@@ -2421,6 +2439,7 @@
             </video>
         </div>
         <div class="video-overlay">
+            <div class="event-logo-watermark" aria-hidden="true">COLOCA TU LOGO AQUI</div>
             <div class="hero-content">
                 <h1>Evento Modelo de Natación</h1>
                 <p class="subtitle">Competencia de Natación gestionada por el sistema <a class="inline-link" href="https://top4race.com" target="_blank" rel="noopener">Top4Race</a></p>
@@ -3143,23 +3162,39 @@
         <div class="container">
             <h2 class="section-title">Contacto de Sistema Top4Race</h2>
             <div class="contact-grid">
-                <!-- WhatsApp Card -->
-                <a href="https://wa.me/573196583574" target="_blank" rel="noopener" class="contact-card-link">
+                <!-- WhatsApp Top4Race -->
+                <a href="https://wa.me/573043499052" target="_blank" rel="noopener" class="contact-card-link">
                     <div class="sticker-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.75 13.96C16.41 13.79 15.31 13.24 15.08 13.15C14.86 13.06 14.7 13.02 14.54 13.28C14.38 13.55 13.91 14.11 13.75 14.28C13.59 14.45 13.43 14.47 13.16 14.3C12.89 14.13 12.06 13.85 11.07 12.99C10.29 12.3 9.73 11.48 9.59 11.21C9.45 10.94 9.56 10.81 9.7 10.67C9.83 10.53 9.99 10.33 10.13 10.18C10.27 10.03 10.32 9.9 10.42 9.73C10.52 9.56 10.47 9.4 10.39 9.27C10.31 9.14 9.85 7.97 9.66 7.52C9.47 7.07 9.28 7.13 9.14 7.12H8.62C8.42 7.12 8.13 7.19 7.89 7.43C7.65 7.67 6.96 8.31 6.96 9.56C6.96 10.81 7.92 12.01 8.06 12.18C8.2 12.35 9.85 14.8 12.29 15.76C14.73 16.72 14.73 16.34 15.13 16.3C15.53 16.26 16.54 15.68 16.75 15.13C16.96 14.58 16.96 14.12 16.88 13.96H16.75Z" stroke="#0b1039" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.04 21.82C17.56 21.82 22 17.38 22 11.86C22 6.34 17.56 1.9 12.04 1.9C6.52 1.9 2.08 6.34 2.08 11.86C2.08 14.13 2.84 16.24 4.12 17.9L2.56 21.34L6.17 19.95C7.73 21.13 9.79 21.82 12.04 21.82Z" stroke="#00f0ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <h3>WhatsApp</h3>
-                    <p>+57 319 658 3574</p>
+                    <h3>WhatsApp Top4Race</h3>
+                    <p>+57 304 349 9052</p>
                 </a>
-                <!-- Instagram Card -->
+                <!-- Correo Top4Race -->
+                <a href="mailto:aquatencd@gmail.com" class="contact-card-link">
+                    <div class="sticker-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v12H4z" stroke="#00f0ff" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="#0b1039" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Correo Top4Race</h3>
+                    <p>aquatencd@gmail.com</p>
+                </a>
+                <!-- Web Top4Race -->
+                <a href="https://top4race.com/" target="_blank" rel="noopener" class="contact-card-link">
+                    <div class="sticker-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#00f0ff" stroke-width="2"/><path d="M3 12h18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 1 0 18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 0 0 18" stroke="#0b1039" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Web Top4Race</h3>
+                    <p>top4race.com</p>
+                </a>
+                <!-- Instagram -->
                 <a href="https://www.instagram.com/aquaten.cd" target="_blank" rel="noopener" class="contact-card-link">
                     <div class="sticker-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 11.37C16 13.38 14.21 15 12 15C9.79 15 8 13.38 8 11.37C8 9.36 9.79 7.75 12 7.75C14.21 7.75 16 9.36 16 11.37Z" stroke="#0b1039" stroke-width="2"/><path d="M17.5 6.5H17.51" stroke="#0b1039" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                     <h3>Instagram</h3>
-                    <p>@AquaTEN</p>
+                    <p>@aquaten.cd</p>
                 </a>
-                <!-- Web Card -->
+                <!-- Web AquaTEN -->
                 <a href="https://www.aquatencd.com/" target="_blank" rel="noopener" class="contact-card-link">
                     <div class="sticker-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#00f0ff" stroke-width="2"/><path d="M3 12h18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 1 0 18" stroke="#0b1039" stroke-width="2"/><path d="M12 3a15 15 0 0 0 0 18" stroke="#0b1039" stroke-width="2"/></svg>
